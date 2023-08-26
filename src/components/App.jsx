@@ -1,3 +1,7 @@
+import React from 'react';
+
+import Searchbar from './Searchbar/Searchbar';
+
 const API_KEY = '6095343-d47de4ae86d54fd6f681d759d';
 
 export const App = () => {
@@ -8,11 +12,11 @@ export const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 30,
         color: '#010101'
       }}
     >
-      React homework template
+      <Searchbar/ >
     </div>
   );
 };
