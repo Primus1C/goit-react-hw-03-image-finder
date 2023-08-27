@@ -4,7 +4,6 @@ import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Modal from './Modal/Modal';
 import Button from './Button/Button';
-//import { getImages } from 'api/pixabay';
 
 export class App extends React.Component {
   state = {
@@ -57,7 +56,8 @@ export class App extends React.Component {
           onSubmit={this.handleSearch} />
 
         <ImageGallery
-          searchString={this.state.searchString} />
+          //searchString={this.state.searchString} />
+          searchString={searchString} />
 
         {/* {showModal && (<Modal onClose={this.toggleModal}>
           <h1>modal title</h1>

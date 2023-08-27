@@ -11,7 +11,7 @@ export default class ImageGallery extends React.Component {
 
   async componentDidMount() {
     console.log('render', this.props.searchString)
-    const data = await getImages({ strQuery: this.props.searchString });
+    const data = await getImages({ strQuery:this.props.searchString, page:1 });
     //const { total, totalHits, hits } = data;
     this.setState({images:data.hits});
     //console.log(total, totalHits, hits)

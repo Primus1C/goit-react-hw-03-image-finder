@@ -6,6 +6,8 @@ const BASE_ORIENTATION = 'horizontal';
 
 export const getImages = async ({ strQuery='', page = 1 }) => {
 
+  console.log('getting string', strQuery);
+
   const params = new URLSearchParams({
     key: API_KEY,
     q: strQuery,
@@ -23,18 +25,5 @@ export const getImages = async ({ strQuery='', page = 1 }) => {
   }
 
   return response.json();
-
-/*
-    return axios.get(`${this.#BASE_URL}`, {
-      params: {
-        key: this.#API_KEY,
-        query: strQuery,
-        per_page: this.per_page,
-        page: this.page,
-        image_type: this.#BASE_TYPE,
-        safesearch: true,
-      },
-    });
-  */
   
-  }
+}
