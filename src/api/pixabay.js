@@ -4,7 +4,7 @@ const BASE_TYPE = 'photo';
 const PER_PAGE = '12';
 const BASE_ORIENTATION = 'horizontal';
 
-export const getImages = async (strQuery,page=1) => {
+export const getImages = async ({ strQuery='', page = 1 }) => {
 
   const params = new URLSearchParams({
     key: API_KEY,
@@ -16,6 +16,7 @@ export const getImages = async (strQuery,page=1) => {
   });
 
   const response = await fetch(`${BASE_URL}?${params}`);
+  console.log(`${BASE_URL}?${params}`);
 
   if (!response.ok) {
     throw new Error('smth went wrong')
