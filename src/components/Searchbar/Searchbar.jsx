@@ -1,6 +1,8 @@
+import React from 'react';
 import './Searchbar.css';
 
-export default function Searchbar({ onSubmit }) {
+export default function Searchbar({ handleSubmit }) {
+
     return (
       <header className='Searchbar'>
         <form className='SearchForm'>
