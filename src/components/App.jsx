@@ -15,7 +15,7 @@ export class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('searching',this.state.searchString);
+    console.log('App searching',this.state.searchString);
     
       //const response = pixabayAPI.getImages(this.state.searchString);
     
@@ -28,10 +28,10 @@ export class App extends React.Component {
     })) 
   }
 
-  handleSearch = ({ target }) => { 
-    const normalizedSearch = target.value.trim();
-    console.log('searching',target);
-    this.setState({searchString: normalizedSearch})
+  handleSearch = data => {
+    console.log('App submit', data);
+    //const normalizedSearch = target.value.trim();
+    //this.setState({searchString: normalizedSearch})
   }
 
   render() {
