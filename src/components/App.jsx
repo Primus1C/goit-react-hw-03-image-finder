@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
@@ -55,10 +56,9 @@ export class App extends React.Component {
       >
         <Searchbar
           onSubmitSearchForm={this.handleSearchFormSubmit} />
-
+        
         <ImageGallery
-          //searchString={this.state.searchString} />
-          searchString={searchString} />
+          searchString={this.state.searchString} />
 
         {/* {showModal && (<Modal onClose={this.toggleModal}>
           <h1>modal title</h1>
@@ -68,6 +68,8 @@ export class App extends React.Component {
         
         <Button />
         
+        <ToastContainer autoClose={4000} />
+
       </div>
     );
   };

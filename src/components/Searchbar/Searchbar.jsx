@@ -1,6 +1,7 @@
 import React from 'react';
 import './Searchbar.css';
 import {FaSistrix} from 'react-icons/fa'
+import { toast } from 'react-toastify';
 
 export default class Searchbar extends React.Component {
   state = {
@@ -14,6 +15,11 @@ export default class Searchbar extends React.Component {
   handleSubmit = evt => {
     evt.preventDefault();
     //console.log('evt=>>', evt)
+    if (this.state.search.trim()==='') {
+      alert('No text entered');
+      //toast.error('No text entered!');
+      return;
+    }
     this.props.onSubmitSearchForm(this.state.search);
     this.setState({ search: '' });
   }
