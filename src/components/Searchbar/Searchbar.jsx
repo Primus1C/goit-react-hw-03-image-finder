@@ -1,5 +1,6 @@
 import React from 'react';
 import './Searchbar.css';
+import {FaSistrix} from 'react-icons/fa'
 
 export default class Searchbar extends React.Component {
   state = {
@@ -14,13 +15,19 @@ export default class Searchbar extends React.Component {
     evt.preventDefault();
     //console.log('evt=>>', evt)
     this.props.onSubmit(this.state.search);
+    this.setState({ search: '' });
   }
 
   render() {
     return (
       <header className='Searchbar'>
         <form className='SearchForm' onSubmit={this.handleSubmit}>
-          <button type='submit' className='SearchForm-button'>
+          <button
+            type='submit'
+            className='SearchForm-button'
+            //FaSistrix style ={{marginRight: 8}}
+            //backgroundimage={FaSistrix}
+          >
             <span className='SearchForm-button-label'>Search</span>
           </button>
           <input
