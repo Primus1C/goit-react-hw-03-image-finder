@@ -30,8 +30,9 @@ export class App extends React.Component {
     })) 
   }
 
-  handleSearch = data => {
-    console.log('App submit', data.trim().replaceAll(' ','+'));
+  handleSearchFormSubmit = data => {
+    //console.log('state-searchString', this.state.searchString);
+    console.log('App submit ==>', data.trim().replaceAll(' ','+'));
     const normalizedSearch = data.trim().replaceAll(' ','+');
     this.setState({ searchString: normalizedSearch });
   }
@@ -53,7 +54,7 @@ export class App extends React.Component {
         }}
       >
         <Searchbar
-          onSubmit={this.handleSearch} />
+          onSubmitSearchForm={this.handleSearchFormSubmit} />
 
         <ImageGallery
           //searchString={this.state.searchString} />
