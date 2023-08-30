@@ -25,9 +25,8 @@ export default class Searchbar extends React.Component {
           <button
             type='submit'
             className='SearchForm-button'
-            //FaSistrix style ={{marginRight: 8}}
-            //backgroundimage={FaSistrix}
           >
+            <FaSistrix className='react-icons'/>
             <span className='SearchForm-button-label'>Search</span>
           </button>
           <input
