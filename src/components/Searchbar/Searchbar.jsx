@@ -11,13 +11,13 @@ export default class Searchbar extends React.Component {
   handleChange = evt => { 
     this.setState({ search: evt.currentTarget.value });
   }
-
+ 
   handleSubmit = evt => {
     evt.preventDefault();
     //console.log('evt=>>', evt)
     if (this.state.search.trim()==='') {
-      alert('No text entered');
-      //toast.error('No text entered!');
+      //alert('No text entered');
+      toast.error('No text entered!');
       return;
     }
     this.props.onSubmitSearchForm(this.state.search);

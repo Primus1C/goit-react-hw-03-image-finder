@@ -12,7 +12,7 @@ export default class ImageGallery extends React.Component {
   componentDidUpdate(prervProps, prevState) {
     if (prervProps.searchString !== this.props.searchString) {
       const data = getImages({ strQuery: this.props.searchString, page: 1 });
-      console.log(data)
+      console.log('componentDidUpdate',data)
       //this.setState({images:data.value.hits});
     }
 
@@ -20,8 +20,9 @@ export default class ImageGallery extends React.Component {
   
 
   async componentDidMount() {
+    
+    console.log('componentDidMount', this.props.searchString)
     /*
-    console.log('render', this.props.searchString)
     const data = await getImages({ strQuery:this.props.searchString, page:1 });
     //const { total, totalHits, hits } = data;
     this.setState({images:data.hits});

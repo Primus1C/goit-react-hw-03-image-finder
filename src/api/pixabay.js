@@ -18,7 +18,7 @@ export const getImages = async ({ strQuery='', page = 1 }) => {
   });
 
   const response = await fetch(`${BASE_URL}?${params}`);
-  console.log(`${BASE_URL}?${params}`);
+  console.log(`api works: ${BASE_URL}?${params}`);
 
   if (!response.ok) {
     throw new Error('smth went wrong')
